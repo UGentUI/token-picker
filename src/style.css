@@ -1,0 +1,118 @@
+section {
+  padding: var(--space-200, 16px) var(--space-200, 16px) var(--space-400, 32px);
+}
+header {
+  margin-bottom: var(--space-200, 16px);
+}
+
+.token-column {
+  width: 50%;
+}
+
+.light-column {
+  width: 25%;
+}
+
+.dark-column {
+  width: 25%;
+}
+
+.color-preview,
+.space-preview,
+.border-preview,
+.shadow-preview,
+.font-preview {
+  border: 1px solid var(--color-border-default);
+  padding: var(--space-200);
+  border-radius: var(--boder-radius-default, 5px);
+}
+
+.color-preview.light,
+.shadow-preview.light {
+  background-color: var(--light-elevation-surface-basic-default);
+}
+
+.color-preview.dark,
+.shadow-preview.dark {
+  background-color: var(--dark-elevation-surface-basic-default);
+  color: var(--dark-color-text-default);
+}
+
+.swatch,
+.space-sample,
+.border-sample {
+  height: var(--space-300);
+  border: 1px solid var(--color-border-default);
+  margin-bottom: var(--space-100);
+  border-radius: var(--border-radius-small);
+}
+
+.space-sample {
+  background-color: var(--color-background-brand-default);
+}
+
+.space-sample.negative {
+  background-color: var(--color-background-danger-default);
+}
+
+.color.background.danger.default code {
+  background-color: var(--light-elevation-surface-basic-default);
+  padding: var(--space-050) var(--space-100);
+  border-radius: var(--border-radius-small);
+}
+
+.border-sample.width {
+  height: 0;
+  border-color: var(--color-border-default);
+}
+
+.border-sample.radius {
+  border: var(--border-width-small, 1px) solid var(--color-border-default);
+}
+
+.token-labels ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.token-labels ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.token-labels a {
+  display: inline-block;
+  margin-top: var(--space-050);
+  background-color: var(--color-background-neutral-default);
+  padding: var(--space-050) var(--space-100);
+  border-radius: var(--border-radius-small);
+  color: var(--color-text-subtlest);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.token-labels a:hover {
+  background-color: var(--color-background-neutral-hovered);
+}
+
+.token-labels .copy-label {
+  background-color: var(--color-background-neutral-hovered);
+  color: var(--color-text-subtlest);
+  text-align: center;
+  border-radius: var(--border-radius-small);
+  padding: var(--space-050);
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.token-labels a:hover + .copy-label,
+.token-labels a:focus + .copy-label {
+  visibility: visible;
+  opacity: 1;
+}
