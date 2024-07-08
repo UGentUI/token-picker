@@ -1,4 +1,4 @@
-import { Token, Tokens } from "../types";
+import { Token, Tokens, ThemeTokens } from "../types";
 import { tokenToCSSVariable, isNestedToken, createTokenLabels } from "./utils";
 
 export function renderColorTokens(tokens: Tokens, container: HTMLElement) {
@@ -43,8 +43,12 @@ function renderSubCategory(
   container.appendChild(table);
   const tableBody = table.querySelector("tbody")!;
 
-  const lightTokens = tokens.light[category][subCategory] || {};
-  const darkTokens = tokens.dark[category][subCategory] || {};
+  const lightTokens = (tokens.light[category] as ThemeTokens)[
+    subCategory
+  ] as ThemeTokens;
+  const darkTokens = (tokens.dark[category] as ThemeTokens)[
+    subCategory
+  ] as ThemeTokens;
 
   const allTokenNames = new Set([
     ...Object.keys(lightTokens),
