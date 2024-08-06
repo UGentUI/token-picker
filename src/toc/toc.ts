@@ -58,7 +58,7 @@ function getSubCategories(tokens: Tokens, category: string): string[] {
       "ugent-blue",
       "ugent-yellow",
       "mint",
-      "coral",
+      "tomato",
       "electric-blue",
       "neutral",
     ];
