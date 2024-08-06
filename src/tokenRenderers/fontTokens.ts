@@ -110,8 +110,12 @@ function getFontPreviewStyle(tokenName: string, value: string): string {
     return `font-weight: ${value};`;
   } else if (tokenName.includes("body")) {
     return `font-size: ${value};`;
+  } else if (tokenName.includes("heading")) {
+    return `font-size: ${value};`;
   } else if (tokenName.includes("lineheight")) {
     return `line-height: ${value}; background-color: var(--color-background-neutral-default);`;
+  } else if (tokenName.includes("letterspacing")) {
+    return `letter-spacing: ${value};`;
   } else {
     return ``;
   }
