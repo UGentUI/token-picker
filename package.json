@@ -2,7 +2,7 @@
   "name": "@ugent-ui/token-picker",
   "description": "Easily find, select and copy UGent UI design tokens for use in your project.",
   "private": true,
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
